@@ -10,18 +10,18 @@ const Page = () => {
         <Link href="/">Home</Link>
       </p>
       <p>
-        <Link href={{
-          pathname: "/products",
-          query: {
-            page: 1,
-            sort: "name",
-            limit: "",
-            order: "asc",
-            status: "active",
-            category: "laptop",
-          },
-        }}
-        
+        <Link
+          href={{
+            pathname: "/products",
+            query: {
+              page: 1,
+              sort: "name",
+              limit: 12,
+              order: "asc",
+              status: "active",
+              category: "laptop",
+            },
+          }}
         >
           Products
         </Link>
