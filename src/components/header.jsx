@@ -6,7 +6,7 @@ import menuItems from "@/helpers/data/main-menu.json";
 
 export const Header = () => {
   return (
-    <Navbar expand="lg" className="bg-dark fs-1  " data-bs-theme="dark">
+    <Navbar expand="lg" className="bg-dark fs-1 " data-bs-theme="dark">
       <Container>
         <Navbar.Brand className="fs-1" href="/" as={Link}>
           Cosmo Shop
@@ -19,7 +19,7 @@ export const Header = () => {
                 key={item.id}
                 href={item.url}
                 as={Link}
-                prefech={item.prefetch}
+                prefetch={item.prefetch}
               >
                 {item.title}
               </Nav.Link>
