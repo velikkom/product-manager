@@ -13,11 +13,12 @@ import { TfiShoppingCart } from "react-icons/tfi";
 import menuItems from "@/helpers/data/dashboard-menu.json";
 
 export const DashboardMenu = () => {
+  
   const pathname = usePathname();
  
- 
+
   return (
-    <Navbar expand="lg" className="bg-info mb-3">
+    <Navbar expand="lg" className="bg-success mb-3">
       <Container fluid>
         <Navbar.Brand href="#">Dashboard</Navbar.Brand>
         <Navbar.Toggle aria-controls="dashboard-menu" />
