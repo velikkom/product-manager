@@ -1,7 +1,10 @@
 import React from 'react'
+import "./footer.scss"
 
 export const Footer = () => {
   return (
-    <div className='bg-dark text-light fs-1' data-bs-theme="dark">Footer</div>
+    <footer className='bg-dark text-light p-4 text-center' data-bs-theme="dark">
+      &copy; Copyright  by Cosmo shop
+    </footer>
   )
 }

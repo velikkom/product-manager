@@ -1,12 +1,13 @@
+import { PageHeader } from "@/components/page-header";
 import { Redirect } from "@/components/redirect";
 import React from "react";
 
 const Page = () => {
   return (
-    <div>
-      <h1>Login Page</h1>
+    <>
+      <PageHeader title="Login" />
       <Redirect />
-    </div>
+    </>
   );
 };
 

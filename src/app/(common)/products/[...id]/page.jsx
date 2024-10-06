@@ -1,10 +1,14 @@
-import React from 'react'
+import { PageHeader } from "@/components/page-header";
+import React from "react";
 
 const Page = ({ params }) => {
-    console.log({params})
-  return <div>Products Detail Page : {params.id}</div>
-    
-  
-}
+  console.log({ params });
+  return (
+    <>
+      <PageHeader title="Product" />
+      Product Details Page: {params.id}
+    </>
+  );
+};
 
-export default Page
+export default Page;

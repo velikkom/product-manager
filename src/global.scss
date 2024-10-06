@@ -1,1 +1,7 @@
+$font-family-sans-serif: var(--font-montserrat);
 @import "bootstrap/scss/bootstrap";
+
+h1 {
+    font-family: var(--font-roboto);
+    font-weight: 700;
+}
