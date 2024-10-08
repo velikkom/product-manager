@@ -10,8 +10,13 @@ export const Header = () => {
     <Navbar expand="lg" className="bg-dark fs-1 " data-bs-theme="dark">
       <Container>
         <Navbar.Brand className="fs-1" href="/" as={Link}>
-          <Image src="/images/logo (1).png" alt="Cosmo Shop" width={250} height={40} />
-         
+          <Image
+            src="/images/logo (1).png"
+            alt="Cosmo Shop"
+            width={250}
+            height={40}
+            priority
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

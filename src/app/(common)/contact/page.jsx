@@ -2,6 +2,11 @@ import { PageHeader } from "@/components/page-header";
 import { wait } from "@/helpers/functions";
 import React from "react";
 
+export const metadata = {
+  title: "Contact Us ",
+  description: "Cheap electronic devices",
+};
+
 const Page = async () => {
   await wait(3000);
   //throw new Error("Something went wrong");
