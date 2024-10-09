@@ -1,24 +1,26 @@
 import { PageHeader } from "@/components/page-header";
+import { ProductDetails } from "@/components/product-details";
+
 import React from "react";
 
-
-export const generateMetadata = () => {
-
-  //fetching data
-  return{
-    title: "Dynamik Products details ",
-  description: "Cheap electronic devices",
-  }
-  
+export const generateMetadata = async ({ params }) => {
+  const res = await fetch(`https://dummyjson.com/products/${params.id}`);
+  const data = await res.json();
+  return {
+    title: data.title,
+    description: data.description,
+  };
 };
 
+const Page = async ({ params }) => {
+  const res = await fetch(`https://dummyjson.com/products/${params.id}`);
+  const data = await res.json();
+  console.log(data);
 
-const Page = ({ params }) => {
-  console.log("product details sayfası dinamik");
   return (
     <>
-      <PageHeader title="Product" />
-      Product Details Page: {params.id}
+      <PageHeader title={data.title} />
+      <ProductDetails product={data} />
     </>
   );
 };

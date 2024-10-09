@@ -1,4 +1,5 @@
 import { PageHeader } from '@/components/page-header'
+import { ProductList } from '@/components/product-list';
 import React from 'react'
 
 
@@ -6,12 +7,16 @@ export const metadata = {
   title: "Products",
   description: "Cheap electronic devices",
 };
-const Page = () => {
-  console.log("Product sayfası static")
+const Page = async() => {
+  const res = await fetch("https://dummyjson.com/products");
+  const data = await res.json();
+ 
+ 
   return (
-    <div>
+    <>
       <PageHeader title="Products" />
-    </div>
+      <ProductList  products={data.products} />
+    </>
   )
 }
 

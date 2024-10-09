@@ -1,8 +1,13 @@
+import { DashboardProductList } from '@/components/dasboard-product-list';
 import React from 'react'
 
-const Page = () => {
+const Page =async () => {
+
+  const res = await fetch("https://dummyjson.com/products");
+  const data = await  res.json();
+
   return (
-    <div>Dashboard Products Page</div>
+    <DashboardProductList products={data.products} />
   )
 }
 
