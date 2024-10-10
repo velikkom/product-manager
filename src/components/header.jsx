@@ -7,8 +7,8 @@ import Image from "next/image";
 
 export const Header = () => {
   return (
-    <Navbar expand="lg" className="bg-dark fs-1 " data-bs-theme="dark">
-      <Container>
+    <Navbar expand="lg" className="bg-dark" data-bs-theme="dark">
+      <Container className="d-flex flex-row-reverse gap-6">
         <Navbar.Brand className="fs-1" href="/" as={Link}>
           <Image
             src="/images/logo (1).png"

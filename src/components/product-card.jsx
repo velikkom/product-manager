@@ -4,13 +4,13 @@ import Link from "next/link";
 import React from "react";
 import { Badge, Card } from "react-bootstrap";
 
-export const ProductCard = ({ id, title, price, thumbnail }) => {
+export const ProductCard = ({ id, title, price, image }) => {
   return (
     <Card className="h-100" href={`/products/${id}`} as={Link}>
       <div className="position-relative" style={{ height: "200px" }}>
         <Card.Img
           variant="top"
-          src={thumbnail}
+          src={image}
           as={Image}
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
