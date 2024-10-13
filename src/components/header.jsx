@@ -7,9 +7,14 @@ import Image from "next/image";
 
 export const Header = () => {
   return (
-    <Navbar expand="lg" className="bg-dark" data-bs-theme="dark">
-      <Container className="d-flex flex-row-reverse gap-6">
-        <Navbar.Brand className="fs-1" href="/" as={Link}>
+    <Navbar
+      expand="lg"
+      className="bg-dark d-flex "
+      data-bs-theme="dark"
+      collapseOnSelect
+    >
+      <Container className="flex-row p-2  bd-highlight ">
+        <Navbar.Brand className="fs-3  " href="/" as={Link}>
           <Image
             src="/images/logo (1).png"
             alt="Cosmo Shop"
@@ -18,9 +23,9 @@ export const Header = () => {
             priority
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Toggle aria-controls="basic-navbar-nav " />
+        <Navbar.Collapse id="basic-navbar-nav    ">
+          <Nav className=" justify-content-evenly m-4">
             {menuItems.map((item) => (
               <Nav.Link
                 key={item.id}

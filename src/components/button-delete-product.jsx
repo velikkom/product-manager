@@ -1,20 +1,28 @@
 "use client";
+import { deleteProductAction } from "@/actions/product-actions";
 import React from "react";
 import { Button } from "react-bootstrap";
 import { TfiTrash } from "react-icons/tfi";
 
-export const ButtonDeleteProduct = ({id}) => {
+export const ButtonDeleteProduct = ({ id }) => {
+	
+	
+	
+	const handleDelete = async () => {
+		const answer = confirm("Are you sure want to delete?");
+		if (!answer) return;
 
-const handleDelete = () => {
-  const res = confirm("Are you sure? you want to delete");
-  if (!res) return;
+		const res = await deleteProductAction(id); 
 
-  //delete part
-}
+		if(res?.message){
+			alert(res.message);
+		}
 
-  return (
-    <Button variant="link" onClick={handleDelete}>
-      <TfiTrash />
-    </Button>
-  );
+	};
+
+	return (
+		<Button variant="link" onClick={handleDelete}>
+			<TfiTrash />
+		</Button>
+	);
 };

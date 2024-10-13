@@ -20,7 +20,10 @@ const Page = async ({ params }) => {
 
   const fetchRelatedProducts = (await fetch(API_URL)).json();
 
-  const [product, relatedProducts] = await Promise.all([fetchProduct, fetchRelatedProducts]);
+  const [product, relatedProducts] = await Promise.all([
+    fetchProduct,
+    fetchRelatedProducts,
+  ]);
 
   return (
     <>

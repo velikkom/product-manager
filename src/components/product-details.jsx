@@ -9,7 +9,8 @@ export const ProductDetails = ({ product }) => {
 	return (
 		<Row>
 			<Col md={6}>
-				<Image src={image} alt={title} width={256} height={256} />
+				<Image src={image} alt={title} width={300} height={300} />
+				<Image src={image} alt={title} width={300} height={300} className="img-fluid" />
 			</Col>
 
 			<Col md={6} className="d-flex flex-column justify-content-center align-items-start">
