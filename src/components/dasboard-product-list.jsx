@@ -1,8 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-
-import { ButtonDeleteProduct, DeleteProduct } from "./button-delete-product";
-import { ButttonEditProduct } from "./button-edit-product";
+import { ButtonDeleteProduct } from "./button-delete-product";
+import { ButtonEditProduct } from "./button-edit-product";
 import { ButtonNewProduct } from "./button-new-product";
 
 export const DashboardProductList = ({ products }) => {
@@ -12,9 +11,11 @@ export const DashboardProductList = ({ products }) => {
         <tr>
           <th>#</th>
           <th>Title</th>
-          <th>Category</th>
+          <th>Categroy</th>
           <th>Price</th>
-          <th><ButtonNewProduct/></th>
+          <th>
+            <ButtonNewProduct />
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -25,7 +26,8 @@ export const DashboardProductList = ({ products }) => {
             <td>{item.category}</td>
             <td>${item.price}</td>
             <td>
-              <ButttonEditProduct id={item.id} />
+              <ButtonEditProduct id={item.id} />
+
               <ButtonDeleteProduct id={item.id} />
             </td>
           </tr>

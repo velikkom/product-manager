@@ -2,11 +2,13 @@
 import React from "react";
 
 export const Client = ({ children }) => {
+  console.log("Client component");
+
   return (
     <div>
-      <p> This is a client Component</p>
-      <button onClick={() => alert("This is a client Component")}>
-        Click Client button
+      <p>This is a client component</p>
+      <button onClick={() => console.log("Hello client")}>
+        Click Client Button
       </button>
 
       {children}

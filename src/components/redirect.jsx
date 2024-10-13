@@ -1,42 +1,42 @@
 "use client";
-
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { Button } from "react-bootstrap";
 import iwatch from "../../public/images/iwatch.png";
-import Image from "next/image";
 
 export const Redirect = () => {
-  const router = useRouter();
+	const router = useRouter();
 
-  const handleClick = () => {
-    const res = confirm("Are you sure? you want to redirect");
-    if (!res) return;
+	const handleClick = () => {
+		const res = confirm("Are you sure you want to redirect?");
+		if (!res) return;
 
-    // throw new Error("Something went wrong");
-    // router.push("/dashboard");
-  };
-  return (
-    <div>
-      <Image
-        src="/images/landscape.jpg"
-        alt="Landscape"
-        width={300}
-        height={300}
-      />
+		// throw new Error("Redirection error");
 
-      <Image src={iwatch} alt="iwatch" width={321} height={210} />
-      <div style={{height: "200px", position: "relative" }}>
-        <Image
-          src={
-            "https://images.unsplash.com/photo-1726853546092-6a2f2c2cf652?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
-          alt="sun setting"
-          style={{objectFit: "cover"}}
-          fill
-        />
-      </div>
-      <Button onClick={handleClick}>Redirect</Button>
-    </div>
-  );
+		// router.replace("/dashboard");
+	};
+
+	return (
+		<div>
+			<Image
+				src="/images/nature.jpg"
+				width="500"
+				height="334"
+				alt="landscape"
+			/>
+			<Image src={iwatch} alt="iwatch" />
+
+			<div style={{ height: "200px", position: "relative" }}>
+				<Image
+					src="https://plus.unsplash.com/premium_photo-1726880637228-52cb20f7bc7d?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					fill
+					alt="landscape"
+          style={{objectFit: 'cover'}}
+				/>
+			</div>
+
+			<Button onClick={handleClick}>Redirect</Button>
+		</div>
+	);
 };

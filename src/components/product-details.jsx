@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Badge, Button, Col, Row } from "react-bootstrap";
+import { Badge, Col, Row } from "react-bootstrap";
 import { ButtonReturnBack } from "./button-return-back";
 
 export const ProductDetails = ({ product }) => {
@@ -9,8 +9,7 @@ export const ProductDetails = ({ product }) => {
 	return (
 		<Row>
 			<Col md={6}>
-				<Image src={image} alt={title} width={300} height={300} />
-				<Image src={image} alt={title} width={300} height={300} className="img-fluid" />
+				<Image src={image} alt={title} width={500} height={500} className="img-fluid" />
 			</Col>
 
 			<Col md={6} className="d-flex flex-column justify-content-center align-items-start">

@@ -13,7 +13,6 @@ export const ProductCard = ({ id, title, price, image }) => {
           src={image}
           as={Image}
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
           alt={title}
           style={{ objectFit: "contain" }}
         />

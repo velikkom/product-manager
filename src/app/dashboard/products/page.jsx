@@ -4,7 +4,7 @@ import React from 'react'
 const Page =async () => {
 
   const res = await fetch(
-		"https://66c395ffd057009ee9c0b957.mockapi.io/products"
+		"https://66c39605d057009ee9c0b99e.mockapi.io/products"
 	);
   const data = await  res.json();
 

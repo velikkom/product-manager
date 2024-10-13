@@ -1,21 +1,13 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
-import {
-  Container,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Offcanvas,
-} from "react-bootstrap";
-import { TfiShoppingCart } from "react-icons/tfi";
+import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import menuItems from "@/helpers/data/dashboard-menu.json";
+import { TfiShoppingCart } from "react-icons/tfi";
+import { usePathname } from "next/navigation";
 
 export const DashboardMenu = () => {
-  
   const pathname = usePathname();
- 
 
   return (
     <Navbar expand="lg" className="bg-success mb-3">

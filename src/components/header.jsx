@@ -9,23 +9,23 @@ export const Header = () => {
   return (
     <Navbar
       expand="lg"
-      className="bg-dark d-flex "
+      className="bg-dark"
       data-bs-theme="dark"
       collapseOnSelect
     >
-      <Container className="flex-row p-2  bd-highlight ">
-        <Navbar.Brand className="fs-3  " href="/" as={Link}>
+      <Container>
+        <Navbar.Brand href="/" as={Link}>
           <Image
             src="/images/logo (1).png"
             alt="Cosmo Shop"
             width={250}
-            height={40}
-            priority
+            height={40}            
+            // style={{ objectFit: "cover" }}
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav " />
-        <Navbar.Collapse id="basic-navbar-nav    ">
-          <Nav className=" justify-content-evenly m-4">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
             {menuItems.map((item) => (
               <Nav.Link
                 key={item.id}
